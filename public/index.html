@@ -7,21 +7,30 @@
 	</head>
 	<body>
 		<div id="navbar" class="tab">
-			<button>Clear page</button>
+			<div>
+				<button id="up_btn" onClick="upWindow()">Up</button>
+			</div>
+			<div>
+				Sport: 
+				<select id="sport">
+					<option selected value='null'>None</option>
+				</select>
+			</div>
 			
-			Sport: 
-			<select id="sport">
-				<option selected value='null'>None</option>
-			</select>
-
-			Bookmakers: 
-			<select id="bm">
-				<option selected >All</option>
-			</select>
+			<div>
+				Bookmakers: 
+				<select id="bm">
+					<option selected >All</option>
+				</select>
+			</div>
+			<div>
+				Count records: <span id="count">0</span>
+			</div>
 		</div>
 		<div id="content">
 			
 		</div>
+		<script type="text/javascript" src='./scripts/anim.js'></script>
 		<script type="text/javascript" src='./scripts/navbar.js'></script>
 		<script type="text/javascript" src='./scripts/content.js'></script>
 		<script type="text/javascript" src='./scripts/websocket.js'></script>

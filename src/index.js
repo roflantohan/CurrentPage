@@ -1,7 +1,8 @@
 'use strict';
 
 const fastify = require('fastify')({ logger: true });
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
+const HOST = '0.0.0.0';
 const path = require('path');
 
 //---------websocket-------------//
@@ -37,4 +38,4 @@ fastify.ready(err => {
   }
 });
 
-fastify.listen(port, "0.0.0.0");
+fastify.listen(PORT, HOST);

@@ -3,54 +3,9 @@
     border: 1px solid #ccc;
     background-color: #f1f1f1;
 }
-
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
+#navbar{
+    display: table;
 }
-
-.tab button:hover {
-    background-color: #ddd;
-}
-
-
-.tab button.active {
-    background-color: #ccc;
-}
-
-.tab a {
-    text-decoration: none;
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-
-}
-
-.tab a:hover {
-    background-color: #ddd;
-}
-
-.tab a:active {
-    background-color: #ccc;
-    text-decoration: none;
-}
-
-.tab a:visited {
-    text-decoration: none;
-}
-
-.tabcontent {
-    display: none;
-} 
 
 .sticky {
   position: fixed;
@@ -64,7 +19,9 @@ table {
     text-align: left;
     border-collapse: separate;
     border: 1px solid #f1f1f1;
-    font-size: 10px;
+    font-size: 15px;
+    font-style: normal;
+    white-space: nowrap; 
 }
 th {
     border: 1px solid #f1f1f1;
@@ -76,5 +33,12 @@ td {
 }
 
 #content{
-    display: table;
+    display: inline;
+    overflow-y: scroll;
+}
+
+
+.tab div {
+    display: inline;
+
 }

@@ -17,5 +17,6 @@ ws.onmessage = message => {
       msg.data.map(record => {
         addRecord(record)
       })
+      clearRecord();
   }
 };

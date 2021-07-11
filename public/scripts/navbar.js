@@ -95,6 +95,10 @@ const loader = () => {
   }
 }
 
+const upPage = () => {
+  window.scrollBy(0, 0)
+}
+
 window.onload = loader;
 document.getElementById("sport").addEventListener("change", changeSport)
 document.getElementById("sport").addEventListener("change", changeBM)
