@@ -1,0 +1,21 @@
+{
+  "name": "table",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^3.18.1",
+    "fastify-static": "^4.2.2",
+    "fastify-websocket": "^3.2.0",
+    "ws": "^7.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.10"
+  }
+}
