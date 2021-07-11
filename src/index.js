@@ -37,4 +37,4 @@ fastify.ready(err => {
   }
 });
 
-fastify.listen(port);
+fastify.listen(port, "0.0.0.0");
