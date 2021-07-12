@@ -19,6 +19,9 @@ const countRecord = () => {
 
     if(rows && counter){
         counter.innerText = rows.length;
+        if(rows.length > 8000){
+            counter.style.color = "red"
+        }
         return rows.length;
     }else{
         return 0;
@@ -26,22 +29,45 @@ const countRecord = () => {
 
 }
 
-
 const clearRecord = () => {
     const rows = countRecord();
-    const MAX_COUNT_ALL = 10;
-    const MAX_COUNT_TABLE = 2;
+    const MAX_COUNT_ALL = 10000;
+    const MAX_COUNT_TABLE = 100;
     if(rows > MAX_COUNT_ALL){
+        console.log(1)
         const tables = document.getElementsByTagName("table");
         if(tables){
             for(let table of tables){
                 const countRowsTable = table.childNodes.length;
                 if(countRowsTable > MAX_COUNT_TABLE){
-                    //console.log(table.childNodes[0])
-                    
+                    for(let i = table.childNodes.length-1; i > MAX_COUNT_TABLE; i--){
+                        table.removeChild(table.childNodes[i])
+                    }
                 }
             }
         }
+    }
+    countRecord();
+}
+
+const addSpace = () => {
+    const tables = document.getElementsByTagName("table");
+    if(tables){
+        for(let table of tables){
+            if(table.childNodes[1]){
+                const empty = table.childNodes[1];
+                if(empty.innerText.indexOf("-/-") === -1){
+                    const elem = document.createElement("tr")
+                    elem.innerHTML = `<td>-/-</td>`;
+                    const header = table.childNodes[0]
+                    header.insertAdjacentHTML("afterEnd", elem.innerHTML)
+                    header.insertAdjacentHTML("afterEnd", elem.innerHTML)
+                }
+            }
+            
+            
+        }
+        
     }
 }
 
